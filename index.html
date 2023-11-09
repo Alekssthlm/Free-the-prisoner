@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="body-wrap">
+      <header class="header" id="header">
+        <h1 class="header_title">GUESS THE WORD</h1>
+        <p class="header_text">'SAVE THE PRISONER!'</p>
+      </header>
+      <main>
+        <!-- WELCOME PAGE -->
+        <div id="newGameContainer" class="new-game-container">
+          <img src="img-1.jpeg" alt="" class="resize-img">
+          <button class="new-game-container_button button-style" id="newGameButton">START NEW GAME</button>
+        </div>
+        <!-- INPUT WORD PAGE -->
+        <div id="inputGuessContainer" class="input-container">
+          <img src="img-loading.jpg" class="resize-img" alt="">
+          <form class="input-container_form" id="inputForm">
+            <label class="input-label" for="word">Enter word to guess:</label>
+            <input class="input-word" type="text" name="" id="word" autocomplete="off">
+            <button class="input-container_button button-style" id="submitWordButton">SAVE</button>
+          </form>
+        </div>
+        <!-- GAME PAGE -->
+        <div id="gameContainer" class="gameplay-container">
+          <img src="gameplay images/chance6.jpeg" id="imageVisualizer" class="resize-img" alt="">
+          <form class="gameplay-input-container" id="gameplayForm">
+            <input type="text" id="guess" class="guess" placeholder="Guess a letter or word" autocomplete="off">
+            <button type="submit" id="submitGuessButton" class="button-style">CHECK</button>
+          </form>
+          <div id="word-container">
+            <div class="visualizer-container">
+              <p class="word-container_title">Word to guess:</p>
+              <p id="visualizer" class="visualizer"></p>
+            </div>
+            <div class="game-monitor">
+              <p class="letters-guessed style-title">LETTERS USED</p>
+              <p class="chances-left style-title">CHANCES LEFT</p>
+              <p id="lettersGuessed" class="style-data"> </p>
+              <p id="chancesLeft" class="style-data">6</p>    
+            </div>
+          </div>
+          <div id="handman-container"></div>
+          <details class="instructions-container">
+            <summary>Instructions</summary>
+            <ul>
+              <br>
+              <li>A word has been picked for you to guess</li>
+              <li>
+                The underscores above represent how many characters the word contains
+              </li>
+              <li>You can guess a letter at a time or a whole word</li>
+              <li>A character will be revealed every time you guess correctly</li>
+              <li>
+                A turn will be lost every time you guess incorrectly, stressing the prisoner 
+              </li>
+              <li>You get max 6 attemps</li>
+            </ul>
+          </details>
+          <div class="restart-button-container">
+            <button class="restart-button" id="restartButton">RESTART</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
