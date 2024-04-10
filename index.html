@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Free the prisoner!</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +13,7 @@
   <body>
     <div class="body-wrap">
       <header class="header" id="header">
-        <h1 class="header_title">GUESS THE WORD</h1>
-        <p class="header_text">'SAVE THE PRISONER!'</p>
+        <h1 class="header_title">SAVE THE PRISONER</h1>
       </header>
       <main>
         <!-- WELCOME PAGE -->
@@ -51,8 +50,12 @@
             </div>
           </div>
           <div id="handman-container"></div>
-          <details class="instructions-container">
-            <summary>Instructions</summary>
+          <button id="showInstructions">Instructions</button>
+          <div id="instructionsContainer" class="instructions-container">
+            <div class="modal-header">
+              <span>Instructions</span>
+              <button id="close-modal">CLOSE</button>
+            </div>
             <ul>
               <br>
               <li>A word has been picked for you to guess</li>
@@ -66,7 +69,7 @@
               </li>
               <li>You get max 6 attemps</li>
             </ul>
-          </details>
+          </div>
           <div class="restart-button-container">
             <button class="restart-button" id="restartButton">RESTART</button>
           </div>

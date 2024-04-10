@@ -27,8 +27,6 @@ function createArrays(){
     let visualizer = document.querySelector('#visualizer');
     visualizer.innerHTML = `${spacesArray.join(" ").toString()}`;
   }
-  console.log(wordArray);
-  console.log(spacesArray);
 }
 
 function runGame(){
@@ -137,3 +135,14 @@ submitGuessButtonEl.addEventListener('click', runGame);
 
 let restartButton = document.querySelector('#restartButton');
 restartButton.addEventListener('click', refreshPage);
+
+let toggleInstructionsBtn = document.querySelector('#showInstructions');
+let closeInstructionsBtn = document.querySelector('#close-modal');
+let instructionsContainerEl = document.querySelector('#instructionsContainer');
+
+function toggleInstructions(){
+  instructionsContainerEl.classList.toggle('show');
+}
+
+toggleInstructionsBtn.addEventListener('click', toggleInstructions);
+closeInstructionsBtn.addEventListener('click', toggleInstructions);

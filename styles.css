@@ -9,15 +9,14 @@ img{
 
 body{
   background-color: lightblue;
-  padding: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 
 .body-wrap{
-  min-height: 70rem;
+  height: 100dvh;
   margin: 0 auto;
   background-color: white;
-  padding: 0 2rem 2rem;
+  padding: 0 0 2rem;
   max-width: 70rem;
 }
 
@@ -27,12 +26,12 @@ body{
 }
 
 .header_title{
-  font-size: 6rem;
+  font-size: 2rem;
   margin: 0 0 1rem;
 }
 
 .header_text{
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 /* WELCOME PAGE */
@@ -42,14 +41,14 @@ body{
 }
 
 .button-style, .restart-button{
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: lightblue;
   border: 2px solid rgb(90, 167, 195);
-  padding: 1rem 3rem;
+  padding: 0.5rem 3rem;
 }
 
 
-.button-stylen:hover, .restart-button:hover{
+.button-style:hover, .restart-button:hover{
   background-color: rgb(205, 237, 248);
 }
 
@@ -67,7 +66,7 @@ body{
 .resize-img{
   margin: 0 auto 2rem;
   width: 100%;
-  max-width: 30rem;
+  max-width: 20rem;
   border-radius: 25px;
 }
 
@@ -86,7 +85,6 @@ body{
 .input-container_form{
   text-align: center;
 }
-
 
 
 .input-container{
@@ -114,7 +112,7 @@ body{
 
 .guess{
   text-align: center;
-  padding: 1rem 1rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   width: 50%;
 }
@@ -126,11 +124,13 @@ body{
 
 .visualizer-container{
   text-align: center;
-  padding: 1rem;
+  padding: 0.2rem;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
 }
-
-
 
 .visualizer{
   font-size: 2vw;
@@ -145,21 +145,36 @@ body{
 }
 
 .style-title{
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
   background-color: rgb(70, 166, 198);
   color: white;
   border: 1px solid black;
 }
 
 .style-data{
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
   border: 1px solid black;
 }
 
 .instructions-container{
   background-color: rgb(70, 166, 198);
+  width: 80%;
   padding: 1rem;
   font-size: 1rem;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.show{
+  display: block;
 }
