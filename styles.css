@@ -22,7 +22,7 @@ body{
 
 .header{
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .header_title{
@@ -116,6 +116,13 @@ body{
   justify-content: center;
 }
 
+@media (max-width: 768px){
+  .gameplay-input-container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .guess{
   text-align: center;
   padding: 0.5rem;
@@ -125,7 +132,8 @@ body{
 
 @media (max-width: 768px){
   .guess{
-    font-size: 0.7rem;
+    font-size: 1.1rem;
+    width: 100%;
   }
 }
 
