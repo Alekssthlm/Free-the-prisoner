@@ -41,12 +41,18 @@ body{
 }
 
 .button-style, .restart-button{
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: lightblue;
   border: 2px solid rgb(90, 167, 195);
   padding: 0.5rem 3rem;
 }
 
+@media (max-width: 768px){
+  .button-style, .restart-button{
+    font-size: 0.7rem;
+    padding: 0.5rem 2rem;
+  }
+}
 
 .button-style:hover, .restart-button:hover{
   background-color: rgb(205, 237, 248);
@@ -64,7 +70,7 @@ body{
 }
 
 .resize-img{
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
   width: 100%;
   max-width: 20rem;
   border-radius: 25px;
@@ -98,12 +104,12 @@ body{
 }
 
 .restart-button-container{
-  margin: 2rem auto 1rem;
+  margin: 0.5rem auto;
   text-align: center;
 }
 
 .gameplay-input-container{
-  margin: 0 0 2rem;
+  margin: 0 0 0.5rem;
   text-align: center;
   display: flex;
   align-items: baseline;
@@ -117,9 +123,10 @@ body{
   width: 50%;
 }
 
-
-.gameplay-input-container button {
-  font-size: 1.5rem;
+@media (max-width: 768px){
+  .guess{
+    font-size: 0.7rem;
+  }
 }
 
 .visualizer-container{
@@ -127,13 +134,14 @@ body{
   padding: 0.2rem;
   border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
 }
 
 .visualizer{
-  font-size: 2vw;
+  font-size: fit-content;
   text-align: center;
 }
 
@@ -152,15 +160,34 @@ body{
   border: 1px solid black;
 }
 
+@media (max-width: 768px){
+  .style-title{
+    font-size: 0.5rem;
+  }
+}
+
 .style-data{
   padding: 0.5rem;
   font-size: 0.9rem;
   border: 1px solid black;
 }
 
-.instructions-container{
+.instructions-button{
+  display: block;
+  margin: auto;
   background-color: rgb(70, 166, 198);
+  color: white;
+}
+
+.instructions-button:hover{
+  background-color: rgb(129, 209, 238);
+}
+
+.instructions-container{
+  background-color: rgb(127, 197, 220);
+  border-radius: 5px;
   width: 80%;
+  max-width: 60rem;
   padding: 1rem;
   font-size: 1rem;
   display: none;
