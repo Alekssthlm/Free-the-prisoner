@@ -12,7 +12,8 @@ let imageArrayIndex = 0;
 let word = document.querySelector('#word');
 
 function storeWordToGuess(){
-  let word = document.querySelector('#word').value;
+  let word = document.querySelector('#word').value.toLowerCase();
+  console.log(word)
   return word;
 }
 
@@ -30,7 +31,8 @@ function createArrays(){
 }
 
 function runGame(){
-  let guess = document.querySelector('#guess').value;
+  let guess = document.querySelector('#guess').value.toLowerCase();
+  console.log(guess);
   let lettersGuessed = document.querySelector('#lettersGuessed');
   let visualizer = document.querySelector('#visualizer');
   lettersGuessed.innerHTML += `${guess} `; 
